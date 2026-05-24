@@ -1,0 +1,177 @@
+/* Reset & Base Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #1a2419; 
+    color: #f2f2e1; 
+    font-family: 'Poppins', sans-serif; 
+    padding: 30px; 
+}
+
+/* Wrapper Utama Biar Ukurannya Terkunci Sesuai Layar */
+.container-admin { 
+    background: #243020; 
+    padding: 30px; 
+    border-radius: 15px; 
+    border: 1px solid #be9d6e; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    overflow-x: auto; /* Jaga-jaga kalau layar kekecilan biar bisa di-scroll */
+}
+
+/* Header Dashboard */
+.header-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.header-admin h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Tombol Tambah Menu */
+.btn-add { 
+    background: #be9d6e; 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 6px; 
+    font-weight: 600; 
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-add:hover {
+    background: #aa895a;
+}
+
+/* Tombol Lihat Web Utama */
+.btn-view-site {
+    background: transparent;
+    color: #be9d6e;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid #be9d6e;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-view-site:hover {
+    background: #be9d6e;
+    color: #1a2419;
+}
+
+/* Tabel Admin Modern & Proporsional */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: white; 
+    color: #333; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    table-layout: fixed; /* Kunci lebar kolom biar ga melar ke kanan */
+}
+
+th, td { 
+    padding: 12px 15px; 
+    text-align: left; 
+    border-bottom: 1px solid #eeeeee; 
+    vertical-align: middle;
+}
+
+th { 
+    background-color: #be9d6e; 
+    color: white; 
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Atur Lebar Kolom Secara Presisi */
+th:nth-child(1), td:nth-child(1) { width: 12%; text-align: center; } /* Gambar */
+th:nth-child(2), td:nth-child(2) { width: 38%; }                   /* Nama Menu */
+th:nth-child(3), td:nth-child(3) { width: 20%; }                   /* Kategori */
+th:nth-child(4), td:nth-child(4) { width: 15%; }                   /* Harga */
+th:nth-child(5), td:nth-child(5) { width: 15%; text-align: center; } /* Aksi */
+
+/* Container Gambar */
+.img-container {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #f9f9f9;
+    margin: 0 auto;
+}
+
+.img-preview { 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.menu-name {
+    font-weight: 500;
+    color: #222;
+}
+
+.menu-price {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Badge Kategori */
+.badge-category {
+    background: #eebc6a21;
+    color: #aa895a;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Area Tombol Aksi */
+.action-cell {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-edit { 
+    color: #2ecc71; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 14px;
+}
+.btn-edit:hover { color: #27ae60; }
+
+.btn-delete { 
+    color: #e74c3c; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 14px;
+}
+.btn-delete:hover { color: #c0392b; }

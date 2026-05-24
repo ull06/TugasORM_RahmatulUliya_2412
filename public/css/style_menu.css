@@ -1,0 +1,351 @@
+/*RESET DASAR*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*BODY*/
+body{
+    font-family: 'Poppins', sans-serif;
+
+    /* warna utama seperti poster */
+    background-color: #394b1f;
+
+    color: white;
+}
+
+
+
+/*NAVBAR*/
+.navbar{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 80px;
+
+    /* navbar tetap di atas */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+
+    /* efek transparan */
+    background: rgba(0,0,0,0.35);
+
+    /* blur aesthetic */
+    backdrop-filter: blur(8px);
+}
+
+/* logo kiri */
+.logo{
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+
+    color: #f5deb3;
+}
+
+/* list menu navbar */
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+/* tulisan menu navbar */
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+/* hover navbar */
+.navbar ul li a:hover{
+    color: #f5deb3;
+}
+
+
+
+/*HERO SECTION*/
+.hero{
+    width: 100%;
+    height: 45vh;
+
+    /* background utama */
+    background-image:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url('/images/bgcoffee.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* isi hero */
+.hero-content{
+    max-width: 800px;
+}
+
+/* tulisan kecil */
+.hero-content h4{
+    font-size: 30px;
+    color: #f5deb3;
+
+    margin-bottom: 10px;
+
+    font-family: 'Playfair Display', serif;
+}
+
+/* tulisan utama */
+.hero-content h1{
+    font-size: 90px;
+
+    font-family: 'Playfair Display', serif;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+/* deskripsi */
+.hero-content p{
+    font-size: 20px;
+
+    color: #e6e6e6;
+
+    margin-bottom: 35px;
+}
+
+/* tombol */
+.btn{
+    display: inline-block;
+
+    padding: 15px 40px;
+
+    background-color: #c79b63;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+}
+
+/* efek hover tombol */
+.btn:hover{
+    background-color: #ddb07a;
+
+    transform: scale(1.05);
+}
+
+
+
+/*SECTION MENU*/
+.menu-section{
+    padding: 120px 80px;
+}
+
+/* container isi */
+.container{
+    width: 100%;
+}
+
+/* judul kategori */
+.category-title{
+    text-align: center;
+
+    margin-bottom: 70px;
+
+    font-size: 60px;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #f5deb3;
+}
+
+/* tulisan kecil di atas judul */
+.category-title span{
+    display: block;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+
+    color: #d9c5a1;
+}
+
+
+
+/*GRID MENU*/
+.menu-grid{
+    display: grid;
+
+    /* otomatis responsive */
+    grid-template-columns:
+    repeat(auto-fit, minmax(260px,1fr));
+
+    gap: 40px;
+}
+
+
+
+/*CARD MENU*/
+.menu-card{
+
+    /* background glassmorphism */
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    /* efek blur */
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* hover naik */
+.menu-card:hover{
+    transform: translateY(-10px);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,0.35);
+}
+
+
+
+/*GAMBAR MENU*/
+.menu-img{
+    width: 100%;
+    height: 320px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.menu-img img{
+    width: auto;
+    height: 115%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.menu-card:hover img{
+    transform: scale(1.08);
+}
+
+/*DETAIL MENU*/
+.menu-details{
+    padding: 25px;
+
+    text-align: center;
+}
+
+/* nama menu */
+.menu-details h3{
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+    color: white;
+}
+
+/* kategori kecil */
+.category-tag{
+    color: #d4c1a3;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+/* harga */
+.price{
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #f5deb3;
+}
+
+
+
+/*RESPONSIVE*/
+@media(max-width: 768px){
+
+    /* navbar mobile */
+    .navbar{
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul{
+        gap: 20px;
+    }
+
+    /* hero text */
+    .hero-content h1{
+        font-size: 55px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+    /* section */
+    .menu-section{
+        padding: 100px 25px;
+    }
+
+    /* judul */
+    .category-title{
+        font-size: 40px;
+    }
+}
+
+
+/* Styling Tambahan untuk Fitur Filter Kategori */
+.title-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.title-container .category-title {
+    margin-bottom: 10px;
+}
+
+.empty-data {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
